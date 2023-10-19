@@ -24,7 +24,7 @@ public class Produto {
 	@Column(name = "produto_id")
 	private Integer produtoId;
 	
-	@Column
+	@Column(name = "produto_nome")
 	private String produtoNome;
 	
 	@ManyToOne
