@@ -22,6 +22,10 @@ public class PedidoService {
 		return pedidoRepository.findById(id).orElse(null);
 	}
 	
+	public Pedido savePedido(Pedido pedido) {
+		return pedidoRepository.save(pedido);
+	}
+	
 	public Pedido updatePedido(Integer id, Pedido pedido) {
 		Pedido pedidoAtualizado = pedidoRepository.findById(id).orElse(null);
 		if (pedidoAtualizado != null) {

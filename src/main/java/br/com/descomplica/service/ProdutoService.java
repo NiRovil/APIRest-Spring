@@ -22,6 +22,10 @@ public class ProdutoService {
 		return produtoRepository.findById(id).orElse(null);
 	}
 	
+	public Produto saveProduto(Produto produto) {
+		return produtoRepository.save(produto);
+	}
+	
 	public Produto updateProduto(Integer id, Produto produto) {
 		Produto produtoAtualizado = produtoRepository.findById(id).orElse(null);
 		if (produtoAtualizado != null) {
